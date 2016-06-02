@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../AnDCpp.iml" filepath="$PROJECT_DIR$/../../AnDCpp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libjdcpp.iml" filepath="$PROJECT_DIR$/libjdcpp.iml" />
+    </modules>
+  </component>
+</project>
