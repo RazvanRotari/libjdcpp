@@ -28,6 +28,14 @@ public class DCClient {
     public DCHandlers.MainDownloadHandler mainDownloader;
     public DCRevconnect revConnectHandler;
     private DCHandlers.BoardMessageHandler mainBoardMessageHandler;
+    private String password;
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    private void sendPassword(String password) {
+        handler.sendPassword(password);
+    }
 
     // BASIC ALIASES to other classes.
 
@@ -101,6 +109,9 @@ public class DCClient {
             DCMessage msg = handler.getNextMessage();
             DCLogger.Log(msg.toString());
             if (msg.command != null)
+                if (msg.command.equals("GetPass")) {
+                    sendPassword(this.password);
+                }
                 if (msg.command.equals("Hello")
                         && msg.hello_s.equals(pref.getNick()))
                     break;

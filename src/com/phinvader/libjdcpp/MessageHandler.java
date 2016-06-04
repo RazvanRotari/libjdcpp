@@ -342,4 +342,10 @@ public class MessageHandler {
         Log.d("MessageHandler", msg);
         send_msg(msg);
     }
+
+    public void sendPassword(String password) {
+        String msg = "$MyPass " + password;
+        Log.d("MessageHandler", "$MyPass");
+        send_msg(msg);
+    }
 }

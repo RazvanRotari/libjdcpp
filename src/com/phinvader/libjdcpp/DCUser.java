@@ -10,6 +10,7 @@ package com.phinvader.libjdcpp;
  */
 public class DCUser {
     public String nick; // filled by myinfo
+    public String password; // just for the current user
     public String ip;
     public long share_size; // filled by myinfo
     public String description; // filled by myinfo

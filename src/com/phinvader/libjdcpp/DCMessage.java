@@ -1,5 +1,7 @@
 package com.phinvader.libjdcpp;
 
+import android.util.Log;
+
 import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -205,6 +207,9 @@ public class DCMessage {
                     hisinfo = new DCUser();
                     hisinfo.nick = new String(input, beg + 1, input.length
                             - beg - 1);
+                } else if (command.equals("GetPass")) {
+                    //Nothing to do here
+
                 } else if (command.equals("Direction")) {
                     String dir_str[] = new String(input, beg + 1, input.length
                             - beg - 1).split("\\s");
